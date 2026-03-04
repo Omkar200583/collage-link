@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokeApi</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <button id="themeBtn">DARK BTN</button>
+        <h1>Joke Api</h1>
+        <form id="jokeform" onsubmit="onclicksJoke(event)">
+
+            <table>
+
+                <tr>
+                    <td>
+                        <p>Select <span>category / categories:</span></p>
+                    </td>
+                    <td>
+                        <input type="radio" name="categoryMode" value="Any" checked> Any <br>
+
+                        <input type="radio" name="categoryMode" value="Custom"> Custom :
+                        <input type="checkbox" class="cat" value="Programming"> Programming
+                        <input type="checkbox" class="cat" value="Misc"> Misc
+                        <input type="checkbox" class="cat" value="Dark"> Dark
+                        <input type="checkbox" class="cat" value="Pun"> Pun
+                        <input type="checkbox" class="cat" value="Spooky"> Spooky
+                        <input type="checkbox" class="cat" value="Christmas"> Christmas
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Select <span>flags</span> to blacklist:</p>
+                    </td>
+                    <td>
+                        (optional)
+                        <input type="checkbox" class="flag" value="nsfw"> NSFW
+                        <input type="checkbox" class="flag" value="religious"> Religious
+                        <input type="checkbox" class="flag" value="political"> Political
+                        <input type="checkbox" class="flag" value="racist"> Racist
+                        <input type="checkbox" class="flag" value="sexist"> Sexist
+                        <input type="checkbox" class="flag" value="explicit"> Explicit
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Select <span>joke type</span>:</p>
+                    </td>
+                    <td>
+                        : <input type="radio" name="type" value="single" required> Single
+                        <input type="radio" name="type" value="twopart"> Two Part
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p><span>Amount</span> of jokes:</p>
+                    </td>
+                    <td>
+                        : <input type="number" name="amount" id="amount" min="1" max="10" value="1">
+                    </td>
+                </tr>
+
+            </table>
+            <hr>
+            <h4 class="font"> Generate Url to Click of Joke </h4>
+
+            <div class="btn">
+                <button type="reset">Reset</button>
+                <button type="submit" id="submit">Send Request</button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
